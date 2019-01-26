@@ -20,15 +20,21 @@ public class UIManager : MonoBehaviour {
 
     }
 
-    public void FadeToBlackAndBack () {
+    public void FadeToBlackAndBack (System.Action OnComplete = null) {
         if (blackoutCoroutine != null) {
             StopCoroutine (blackoutCoroutine);
         }
 
-        blackoutCoroutine = StartCoroutine (Blackout());
+        blackoutCoroutine = StartCoroutine (Blackout(OnComplete));
     }
 
-    IEnumerator Blackout () {
-        yield break;
+    IEnumerator Blackout (System.Action OnComplete = null) {
+        blackoutImage.CrossFadeAlpha (1f, 1f, false);
+        yield return new WaitForSeconds (1f);
+        yield return new WaitForSeconds (1f);
+        blackoutImage.CrossFadeAlpha (0f, 1f, false);
+        if (OnComplete != null) {
+            OnComplete ();
+        }
     }
 }
