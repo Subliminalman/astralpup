@@ -109,9 +109,12 @@ public class AICharacter : MonoBehaviour {
             currentAttackCooldown -= Time.deltaTime;
 
             currentAttackCooldown = Mathf.Max (currentAttackCooldown, 0f);
-            if (Vector3.Distance (transform.position, player.transform.position) < attackRadius && currentAttackCooldown <= 0f) {
-                state = State.ChasePlayer;
-                break;
+
+            if (player != null) {
+                if (Vector3.Distance (transform.position, player.transform.position) < attackRadius && currentAttackCooldown <= 0f) {
+                    state = State.ChasePlayer;
+                    break;
+                }
             }
             if (Vector3.Distance (transform.position, pathPoints[currentPathPoint].position) < 1f) {
                 currentPathPoint++;
@@ -124,6 +127,11 @@ public class AICharacter : MonoBehaviour {
     }
 
     IEnumerator ChasePlayer () {
+        if (player == null) {
+            state = State.Wonder;
+            yield break;
+        }
+
         while (true) {
             navMeshAgent.SetDestination (player.transform.position);
             float pDistance = Vector3.Distance (player.transform.position, transform.position);
