@@ -14,13 +14,8 @@ public class AICharacter : MonoBehaviour {
     float agroRadius = 20f;
     [SerializeField]
     float attackCooldown = 1f;
-
-
     [SerializeField]
     Transform[] pathPoints;
-
-
-    PlayerMovement player;
 
     bool isPaused = false;
     bool hitPlayer = false;
@@ -28,8 +23,7 @@ public class AICharacter : MonoBehaviour {
     float currentAttackCooldown = 0f;
     float currentWonderTime = 0f;
     float minWonderTime = 7f, maxWonderTime = 12f;
-
-    //AI Component
+    PlayerMovement player;
     NavMeshAgent navMeshAgent;
 
     public enum State {
@@ -40,9 +34,7 @@ public class AICharacter : MonoBehaviour {
         Paused
     }
 
-    [SerializeField]
     State state = State.Wonder;
-
     State previousState = State.Wonder;
 
     public State CurrentState {
@@ -172,6 +164,11 @@ public class AICharacter : MonoBehaviour {
     void OnCollisionEnter (Collision _col) {
         if (_col.gameObject.CompareTag ("Player") && hitPlayer == false) {
             hitPlayer = true;
+
+            Player p = _col.gameObject.GetComponent<Player> ();
+            if (p != null) {
+                p.Hurt ();
+            }
         }
     }
 
