@@ -7,15 +7,19 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	private Rigidbody _rb;
-    public float dot;
+    private float _dot;
     [SerializeField]
     private float turningTorqueForce = 1000f;
     [SerializeField]
     private float walkingForce = 500f;
+    [SerializeField]
+    private Transform cameraPivot;
+    private CameraFollow _cameraFollow;
     // Start is called before the first frame update
     void Start()
     {
 		_rb = GetComponent<Rigidbody>();
+        _cameraFollow = cameraPivot.GetComponent<CameraFollow>();
     }
 
     // Update is called once per frame
@@ -24,15 +28,15 @@ public class PlayerMovement : MonoBehaviour
 		float hor = Input.GetAxis("Horizontal");
 		float ver = Input.GetAxis("Vertical");
 
-		Vector3 target = new Vector3(hor, 0, ver);
+        Vector3 target = (cameraPivot.right * hor + cameraPivot.forward * ver);
 
         if (target.magnitude > 0.2f)
         {
             target = Vector3.Normalize(target);
 
-            dot = Vector3.Dot(transform.right, target);
+            _dot = Vector3.Dot(transform.right, target);
 
-            if (dot < 0)
+            if (_dot < 0)
             {
                 _rb.AddTorque(new Vector3(0, -turningTorqueForce * Time.deltaTime));
             }
@@ -42,6 +46,14 @@ public class PlayerMovement : MonoBehaviour
             }
 
             _rb.AddForce(target * walkingForce * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name.Contains("CameraTrigger"))
+        {
+            _cameraFollow.RotateCamera(other.transform);
         }
     }
 }
