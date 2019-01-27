@@ -92,6 +92,11 @@ public class PlayerMovement : MonoBehaviour
         {
             _cameraFollow.RotateCamera (other.transform);
         }
+        ZoomCameraTrigger z = other.transform.gameObject.GetComponent<ZoomCameraTrigger>();
+        if (z != null)
+        {
+            _cameraFollow.cameraSizeTarget = z.cameraSize;
+        }
     }
 
     private void OnCollisionStay(Collision collisionInfo)
