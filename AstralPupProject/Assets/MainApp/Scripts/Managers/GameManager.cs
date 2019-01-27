@@ -48,16 +48,23 @@ public class GameManager : MonoBehaviour {
     public void Setup () {
         player.Setup ();
         //Reset level
+        currentCheckpoint = homeCheckpoint;
     }
 
     public void OnDogDeath () {
         //TODO: do ui transition
         //Find last checkpoint
         if (currentCheckpoint == null) {
-            player.transform.position = homeCheckpoint.transform.position;
+            if (homeCheckpoint != null) {
+                player.transform.position = homeCheckpoint.transform.position;
+            }
         }
 
         Setup ();
+    }
+
+    public void SetCheckpoint (Checkpoint _checkpoint) {
+        currentCheckpoint = _checkpoint;
     }
 
     #endregion 
