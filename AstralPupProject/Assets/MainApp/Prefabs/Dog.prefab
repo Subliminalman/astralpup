@@ -134,7 +134,7 @@ Rigidbody:
   m_GameObject: {fileID: 4863501614003355995}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
+  m_Drag: 0
   m_AngularDrag: 8
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a76f1964dee6614fb6aef976d6f3b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dot: 0
   turningTorqueForce: 1000
   walkingForce: 800
+  cameraPivot: {fileID: 0}
+  _timeSinceGround: 0

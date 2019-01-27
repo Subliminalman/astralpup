@@ -895,15 +895,10 @@ PrefabInstance:
       propertyPath: dog
       value: 
       objectReference: {fileID: 573963111}
-    - target: {fileID: 3737071409125370036, guid: efe409d013d13874fb4f36f6cf8f2112,
+    - target: {fileID: 849042492858825567, guid: efe409d013d13874fb4f36f6cf8f2112,
         type: 3}
-      propertyPath: cameraLerpTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737071409125370036, guid: efe409d013d13874fb4f36f6cf8f2112,
-        type: 3}
-      propertyPath: lerpTime
-      value: 3
+      propertyPath: orthographic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe409d013d13874fb4f36f6cf8f2112, type: 3}
@@ -933,7 +928,7 @@ PrefabInstance:
     - target: {fileID: 4863501614003355994, guid: f2c420e4f2f5c55448346aad6379e7b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 9.469
       objectReference: {fileID: 0}
     - target: {fileID: 4863501614003355994, guid: f2c420e4f2f5c55448346aad6379e7b1,
         type: 3}
@@ -985,5 +980,15 @@ PrefabInstance:
       propertyPath: cameraPivot
       value: 
       objectReference: {fileID: 998913165347830526}
+    - target: {fileID: 4863501614003355989, guid: f2c420e4f2f5c55448346aad6379e7b1,
+        type: 3}
+      propertyPath: walkingForce
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863501614003355989, guid: f2c420e4f2f5c55448346aad6379e7b1,
+        type: 3}
+      propertyPath: jumpForce
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c420e4f2f5c55448346aad6379e7b1, type: 3}
