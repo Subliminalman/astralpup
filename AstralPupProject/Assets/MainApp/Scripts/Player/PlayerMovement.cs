@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
@@ -30,11 +30,15 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator> ();
     }
 
+    private float _baseDrag;
+
 
     // Start is called before the first frame update
     void Start ()
     {
-		_rb = GetComponent<Rigidbody>();       
+		_rb = GetComponent<Rigidbody>();
+        _cameraFollow = cameraPivot.GetComponent<CameraFollow>();
+        _baseDrag = _rb.drag;
     }
 
     // Update is called once per frame
@@ -47,10 +51,13 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 target = (cameraPivot.right * hor + cameraPivot.forward * ver);
 
-        if (_timeSinceGround < _maxTimeSinceGround) {
-            if (target.magnitude > 0.2f) {
-                target = Vector3.Normalize (target);
 
+        if (_timeSinceGround < _maxTimeSinceGround)
+        {
+            _rb.drag = _baseDrag;
+            if (target.magnitude > 0.2f)
+            {
+                target = Vector3.Normalize(target);
                 _dot = Vector3.Dot (transform.right, target);
 
                 if (_dot < 0) {
@@ -71,10 +78,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool ("bark", Input.GetButton ("Submit"));
         } else {
             animator.SetBool ("bark", false);
+            _rb.drag = 0;
         }
 
         animator.SetFloat ("speed", target.magnitude); 
         animator.SetBool ("jump", _timeSinceGround > _maxTimeSinceGround);
+
     }
 
     private void OnTriggerEnter(Collider other)
