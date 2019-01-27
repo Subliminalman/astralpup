@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat ("speed", target.magnitude); 
         animator.SetBool ("jump", _timeSinceGround > _maxTimeSinceGround);
 
+            transform.localEulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
     }
 
     private void OnTriggerEnter(Collider other)

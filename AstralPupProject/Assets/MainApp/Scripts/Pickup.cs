@@ -19,5 +19,6 @@ public class Pickup : MonoBehaviour
         beingCarried = true;
         GameManager.Singleton.hasStick = true;
         GetComponent<Collider>().isTrigger = false;
+        gameObject.layer = 11;// << LayerMask.NameToLayer("IgnorePlayer");
     }
 }
