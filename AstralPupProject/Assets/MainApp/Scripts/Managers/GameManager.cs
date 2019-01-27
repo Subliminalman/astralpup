@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour {
     Player player;
     UIManager uiManager;
 
+
+    Vector3 playerOgPosition;
+
     static GameManager singleton;
     public static GameManager Singleton {
         get {
@@ -50,6 +53,11 @@ public class GameManager : MonoBehaviour {
 
     void SetupComponents () {
         uiManager = Transform.FindObjectOfType<UIManager> ();
+        player = Transform.FindObjectOfType<Player> ();
+
+        if (player) {
+            playerOgPosition = player.transform.position;
+        }
     }
 
     public void Setup () {
@@ -65,6 +73,8 @@ public class GameManager : MonoBehaviour {
             if (currentCheckpoint == null) {
                 if (homeCheckpoint != null) {
                     player.transform.position = homeCheckpoint.transform.position;
+                } else {
+                    player.transform.position = playerOgPosition;
                 }
             }
 
