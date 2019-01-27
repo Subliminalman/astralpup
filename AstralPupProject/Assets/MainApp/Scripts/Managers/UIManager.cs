@@ -11,8 +11,13 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     GameObject quitPanel;
 
-    Coroutine blackoutCoroutine;
 
+    public Text goodbyText, endText, finishText;
+
+    Coroutine blackoutCoroutine;
+    public Image BlackoutImage {
+        get { return blackoutImage; }
+    }
     public void FadeToBlackAndBack (System.Action OnFade = null, System.Action OnComplete = null) {
         if (blackoutCoroutine != null) {
             StopCoroutine (blackoutCoroutine);
