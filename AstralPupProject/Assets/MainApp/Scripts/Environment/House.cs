@@ -6,7 +6,7 @@ using UnityEngine;
 public class House : MonoBehaviour {
 
     public float threshold = 3f;
-
+    public AnimationCurve curve;
     MeshRenderer meshRenderer;
     PlayerMovement playerMovement;
     void Awake () {
@@ -19,9 +19,10 @@ public class House : MonoBehaviour {
         float distance = Vector3.Distance (playerMovement.transform.position, transform.position);
 
         if (distance <= threshold) {
-            float normalized = 1f - Mathf.Clamp01 (distance / threshold);
+            float normalized = Mathf.Clamp01 (distance / threshold);
+
             for (int i = 0; i < meshRenderer.materials.Length; i++) {
-                meshRenderer.materials[i].SetFloat ("_Alpha", normalized);
+                meshRenderer.materials[i].SetFloat ("_Alpha", curve.Evaluate (normalized));
             }
         } 
     }
