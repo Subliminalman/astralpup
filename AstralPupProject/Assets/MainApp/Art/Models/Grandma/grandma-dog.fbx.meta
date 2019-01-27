@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: 57f1b241a6ba441d3a7e3310aa4a85d9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Arm-BendyBone.L
+    100002: Arm-BendyBone.L_end
+    100004: Arm-BendyBone.R
+    100006: Arm-BendyBone.R_end
+    100008: Arm-Head.L
+    100010: Arm-Head.R
+    100012: Arm-Tail.L
+    100014: Arm-Tail.L_end
+    100016: Arm-Tail.R
+    100018: Arm-Tail.R_end
+    100020: B-Leg-BendyBone.L
+    100022: B-Leg-BendyBone.L_end
+    100024: B-Leg-BendyBone.R
+    100026: B-Leg-BendyBone.R_end
+    100028: B-Leg-Head.L
+    100030: B-Leg-Head.R
+    100032: B-Leg-Tail.L
+    100034: B-Leg-Tail.L_end
+    100036: B-Leg-Tail.R
+    100038: B-Leg-Tail.R_end
+    100040: Chair
+    100042: Dog
+    100044: DogMesh
+    100046: Ear-BendyBone.L
+    100048: Ear-BendyBone.L_end
+    100050: Ear-BendyBone.R
+    100052: Ear-BendyBone.R_end
+    100054: Ear-Head.L
+    100056: Ear-Head.R
+    100058: Ear-Tail.L
+    100060: Ear-Tail.L_end
+    100062: Ear-Tail.R
+    100064: Ear-Tail.R_end
+    100066: F-Leg-BendyBone.L
+    100068: F-Leg-BendyBone.L_end
+    100070: F-Leg-BendyBone.R
+    100072: F-Leg-BendyBone.R_end
+    100074: F-Leg-Head.L
+    100076: F-Leg-Head.R
+    100078: F-Leg-Tail.L
+    100080: F-Leg-Tail.L_end
+    100082: F-Leg-Tail.R
+    100084: F-Leg-Tail.R_end
+    100086: Grandma
+    100088: Grandma-dog
+    100090: //RootNode
+    100092: Head
+    100094: Head 1
+    100096: Head_end
+    100098: Jaw-Bottom
+    100100: Jaw-Top
+    100102: Jaw-Top_end
+    100104: Neck
+    100106: Neck 1
+    100108: Spine.00
+    100110: Spine.00 1
+    100112: Spine.01
+    100114: Spine.01 1
+    100116: Sping.02
+    100118: Tail-BendyBone
+    100120: Tail-BendyBone_end
+    100122: Tail-Head
+    100124: Tail-Tail
+    100126: Tail-Tail_end
+    100128: Tongue-BendyBone
+    100130: Tongue-BendyBone_end
+    100132: Tongue-Head
+    100134: Tongue-Tail
+    100136: Tongue-Tail_end
+    400000: Arm-BendyBone.L
+    400002: Arm-BendyBone.L_end
+    400004: Arm-BendyBone.R
+    400006: Arm-BendyBone.R_end
+    400008: Arm-Head.L
+    400010: Arm-Head.R
+    400012: Arm-Tail.L
+    400014: Arm-Tail.L_end
+    400016: Arm-Tail.R
+    400018: Arm-Tail.R_end
+    400020: B-Leg-BendyBone.L
+    400022: B-Leg-BendyBone.L_end
+    400024: B-Leg-BendyBone.R
+    400026: B-Leg-BendyBone.R_end
+    400028: B-Leg-Head.L
+    400030: B-Leg-Head.R
+    400032: B-Leg-Tail.L
+    400034: B-Leg-Tail.L_end
+    400036: B-Leg-Tail.R
+    400038: B-Leg-Tail.R_end
+    400040: Chair
+    400042: Dog
+    400044: DogMesh
+    400046: Ear-BendyBone.L
+    400048: Ear-BendyBone.L_end
+    400050: Ear-BendyBone.R
+    400052: Ear-BendyBone.R_end
+    400054: Ear-Head.L
+    400056: Ear-Head.R
+    400058: Ear-Tail.L
+    400060: Ear-Tail.L_end
+    400062: Ear-Tail.R
+    400064: Ear-Tail.R_end
+    400066: F-Leg-BendyBone.L
+    400068: F-Leg-BendyBone.L_end
+    400070: F-Leg-BendyBone.R
+    400072: F-Leg-BendyBone.R_end
+    400074: F-Leg-Head.L
+    400076: F-Leg-Head.R
+    400078: F-Leg-Tail.L
+    400080: F-Leg-Tail.L_end
+    400082: F-Leg-Tail.R
+    400084: F-Leg-Tail.R_end
+    400086: Grandma
+    400088: Grandma-dog
+    400090: //RootNode
+    400092: Head
+    400094: Head 1
+    400096: Head_end
+    400098: Jaw-Bottom
+    400100: Jaw-Top
+    400102: Jaw-Top_end
+    400104: Neck
+    400106: Neck 1
+    400108: Spine.00
+    400110: Spine.00 1
+    400112: Spine.01
+    400114: Spine.01 1
+    400116: Sping.02
+    400118: Tail-BendyBone
+    400120: Tail-BendyBone_end
+    400122: Tail-Head
+    400124: Tail-Tail
+    400126: Tail-Tail_end
+    400128: Tongue-BendyBone
+    400130: Tongue-BendyBone_end
+    400132: Tongue-Head
+    400134: Tongue-Tail
+    400136: Tongue-Tail_end
+    2100000: Skintone00
+    2100002: White
+    2100004: Black
+    2100006: Skintone01
+    2100008: Pink
+    2100010: Teal
+    2100012: Material
+    2100014: Material.002
+    2100016: Yellow02
+    2100018: Yellow01
+    2100020: Yellow03
+    4300000: Grandma
+    4300002: DogMesh
+    7400000: Grandma-dog|Grandma-idle
+    9500000: //RootNode
+    13700000: DogMesh
+    13700002: Grandma
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 4d1bfc95102f5443db5c8e19c3cc9a47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 6f4b2c01ad42046409f6d5fae94fd34d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 34e3aba13000e476eb1922abcd6d5331, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pink
+    second: {fileID: 2100000, guid: f47c8d9ff5dc74ce6b643670cebc902e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skintone00
+    second: {fileID: 2100000, guid: c240e60dffd87495eb57306abb03d091, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skintone01
+    second: {fileID: 2100000, guid: e93c7ec25a8e14e9887aad098ef8d632, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teal
+    second: {fileID: 2100000, guid: 309cc474f0c5443418a0738760c59e7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 18cbfbae57d5b4204b7ac3ab479228bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow01
+    second: {fileID: 2100000, guid: 7fd7d70073982426ebe60b081c7ed3cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow02
+    second: {fileID: 2100000, guid: 47f1bcff4f7204a1ca33de4aae9120d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow03
+    second: {fileID: 2100000, guid: 0fa4d579e1233486daf32f3c56553981, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Grandma-dog|Grandma-idle
+      takeName: Grandma-dog|Grandma-idle
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.4
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.004
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
