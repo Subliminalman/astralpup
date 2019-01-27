@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent (typeof(Animator))]
 public class Player : MonoBehaviour {
     [SerializeField]
-    int maxHp = 3;
+    int maxHp = 1;
     bool isAlive = true;
     bool hasStick = false;
     int hp = 0;
