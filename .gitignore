@@ -39,3 +39,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+AstralPupProject/.vs/AstralPupProject/v15/Server/sqlite3/storage.ide-wal
+AstralPupProject/.vs/AstralPupProject/v15/Server/sqlite3/storage.ide-shm
+AstralPupProject/.vs/AstralPupProject/v15/Server/sqlite3/storage.ide
