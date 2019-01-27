@@ -16,17 +16,25 @@ public class PlayerMovement : MonoBehaviour
     private Transform cameraPivot;
     private CameraFollow _cameraFollow;
 
+    Animator animator;
+
     public float _timeSinceGround = 0f;
     private float _maxTimeSinceGround = 0.1f;
 
     [SerializeField]
     private float jumpForce = 1000f;
 
+    void Awake () {
+        _cameraFollow = Transform.FindObjectOfType<CameraFollow> ();
+        cameraPivot = _cameraFollow.transform;
+        animator = GetComponentInChildren<Animator> ();
+    }
+
+
     // Start is called before the first frame update
-    void Start()
+    void Start ()
     {
-		_rb = GetComponent<Rigidbody>();
-        _cameraFollow = cameraPivot.GetComponent<CameraFollow>();
+		_rb = GetComponent<Rigidbody>();       
     }
 
     // Update is called once per frame
@@ -39,39 +47,41 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 target = (cameraPivot.right * hor + cameraPivot.forward * ver);
 
-        if (_timeSinceGround < _maxTimeSinceGround)
-        {
-            if (target.magnitude > 0.2f)
-            {
-                target = Vector3.Normalize(target);
+        if (_timeSinceGround < _maxTimeSinceGround) {
+            if (target.magnitude > 0.2f) {
+                target = Vector3.Normalize (target);
 
-                _dot = Vector3.Dot(transform.right, target);
+                _dot = Vector3.Dot (transform.right, target);
 
-                if (_dot < 0)
-                {
-                    _rb.AddTorque(new Vector3(0, -turningTorqueForce * Time.deltaTime));
-                }
-                else
-                {
-                    _rb.AddTorque(new Vector3(0, turningTorqueForce * Time.deltaTime));
+                if (_dot < 0) {
+                    _rb.AddTorque (new Vector3 (0, -turningTorqueForce * Time.deltaTime));
+                } else {
+                    _rb.AddTorque (new Vector3 (0, turningTorqueForce * Time.deltaTime));
                 }
 
-                _rb.AddForce(target * walkingForce * Time.deltaTime);
+                _rb.AddForce (target * walkingForce * Time.deltaTime);
             }
 
-            if (Input.GetButtonDown("Jump"))
-            {
-                Debug.Log("Jump");
-                _rb.AddForce(new Vector3(0, jumpForce, 0));
+            if (Input.GetButtonDown ("Jump")) {
+                Debug.Log ("Jump");
+                _rb.AddForce (new Vector3 (0, jumpForce, 0));
             }
+
+
+            animator.SetBool ("bark", Input.GetButton ("Submit"));
+        } else {
+            animator.SetBool ("bark", false);
         }
+
+        animator.SetFloat ("speed", target.magnitude); 
+        animator.SetBool ("jump", _timeSinceGround > _maxTimeSinceGround);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name.Contains("CameraTrigger"))
+        if (other.name.Contains ("CameraTrigger")) 
         {
-            _cameraFollow.RotateCamera(other.transform);
+            _cameraFollow.RotateCamera (other.transform);
         }
     }
 
