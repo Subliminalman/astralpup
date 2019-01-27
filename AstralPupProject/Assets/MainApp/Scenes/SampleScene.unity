@@ -179,7 +179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &209364776
 GameObject:
@@ -912,7 +912,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f53eb9c30b42f7248a90282c8495f203, type: 2}
+  - {fileID: 2100000, guid: 85ebff7863ffdba40898b50483718ddc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1090,11 +1090,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4863501614003355995, guid: f2c420e4f2f5c55448346aad6379e7b1,
-        type: 3}
-      propertyPath: m_Name
-      value: Dog
-      objectReference: {fileID: 0}
     - target: {fileID: 4863501614003355994, guid: f2c420e4f2f5c55448346aad6379e7b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1149,6 +1144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863501614003355995, guid: f2c420e4f2f5c55448346aad6379e7b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Dog
       objectReference: {fileID: 0}
     - target: {fileID: 4863501614003355989, guid: f2c420e4f2f5c55448346aad6379e7b1,
         type: 3}
