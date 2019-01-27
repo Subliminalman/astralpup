@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour {
     Checkpoint currentCheckpoint;
 
 
-    Player player;
 
+
+    Player player;
+    UIManager uiManager;
 
     static GameManager singleton;
     public static GameManager Singleton {
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour {
     void OnEnable () {
         if (singleton == null) {
             singleton = this;
+            SetupComponents ();
         } else {
             if (singleton != this) {
                 Destroy (this);
@@ -45,6 +48,10 @@ public class GameManager : MonoBehaviour {
 
     #region GameState
 
+    void SetupComponents () {
+        uiManager = Transform.FindObjectOfType<UIManager> ();
+    }
+
     public void Setup () {
         player.Setup ();
         //Reset level
@@ -54,13 +61,15 @@ public class GameManager : MonoBehaviour {
     public void OnDogDeath () {
         //TODO: do ui transition
         //Find last checkpoint
-        if (currentCheckpoint == null) {
-            if (homeCheckpoint != null) {
-                player.transform.position = homeCheckpoint.transform.position;
+        uiManager.FadeToBlackAndBack (() => {
+            if (currentCheckpoint == null) {
+                if (homeCheckpoint != null) {
+                    player.transform.position = homeCheckpoint.transform.position;
+                }
             }
-        }
 
-        Setup ();
+            Setup ();
+        });
     }
 
     public void SetCheckpoint (Checkpoint _checkpoint) {
