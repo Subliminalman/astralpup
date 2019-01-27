@@ -127,4 +127,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dog: {fileID: 0}
-  lerpTime: 0.1
+  lerpTime: 3
+  cameraLerpTime: 1

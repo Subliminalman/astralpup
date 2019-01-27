@@ -11,6 +11,14 @@ public class CameraFollow : MonoBehaviour
     public float cameraLerpTime = 0.75f;
     private float _cameraTimer;
     private Quaternion _startRotation;
+
+    void Awake () {
+        PlayerMovement pm = Transform.FindObjectOfType<PlayerMovement> ();
+        if (pm) {
+            dog = pm.transform;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
