@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
 
     public void Hurt () {
         hp--;
-        if (hp < 0) {
+        if (hp <= 0) {
             KillDog ();
         }
     }

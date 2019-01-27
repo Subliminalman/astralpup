@@ -20,11 +20,27 @@ public class UIManager : MonoBehaviour {
     }
 
     IEnumerator Blackout (System.Action OnFade = null, System.Action OnComplete = null) {
-        blackoutImage.CrossFadeAlpha (1f, 1f, false);
-        yield return new WaitUntil (() => blackoutImage.color.a <= 0f);
+        float t = 0f;
+        while (t < 1f) {
+            t += Time.deltaTime;
+            blackoutImage.color = new Color (0f, 0f, 0f, t);
+            yield return null;
+        }
+
+        if (OnFade != null) {
+            OnFade ();
+        }
+
         yield return new WaitForSeconds (1f);
-        blackoutImage.CrossFadeAlpha (0f, 1f, false);
-        yield return new WaitUntil (() => blackoutImage.color.a >= 1f);
+
+
+        t = 0f;
+        while (t < 1f) {
+            t += Time.deltaTime;
+            blackoutImage.color = new Color (0f, 0f, 0f, 1f - t);
+            yield return null;
+        }
+
         if (OnComplete != null) {
             OnComplete ();
         }

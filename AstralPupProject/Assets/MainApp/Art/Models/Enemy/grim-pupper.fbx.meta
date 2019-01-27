@@ -1,0 +1,263 @@
+fileFormatVersion: 2
+guid: 41ffb23b2e11b4ce89f1befcc9e06206
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Dog
+    100002: DogMesh
+    100004: Ear-BendyBone.L
+    100006: Ear-BendyBone.L_end
+    100008: Ear-BendyBone.R
+    100010: Ear-BendyBone.R_end
+    100012: Ear-Head.L
+    100014: Ear-Head.R
+    100016: Ear-Tail.L
+    100018: Ear-Tail.L_end
+    100020: Ear-Tail.R
+    100022: Ear-Tail.R_end
+    100024: //RootNode
+    100026: Head
+    100028: Jaw-Bottom
+    100030: Jaw-Bottom_end
+    100032: Jaw-Top
+    100034: Jaw-Top_end
+    100036: Neck
+    100038: Spine00
+    100040: Tail-BendyBone
+    100042: Tail-BendyBone_end
+    100044: Tail-Head
+    100046: Tail-Tail
+    100048: Tail-Tail_end
+    400000: Dog
+    400002: DogMesh
+    400004: Ear-BendyBone.L
+    400006: Ear-BendyBone.L_end
+    400008: Ear-BendyBone.R
+    400010: Ear-BendyBone.R_end
+    400012: Ear-Head.L
+    400014: Ear-Head.R
+    400016: Ear-Tail.L
+    400018: Ear-Tail.L_end
+    400020: Ear-Tail.R
+    400022: Ear-Tail.R_end
+    400024: //RootNode
+    400026: Head
+    400028: Jaw-Bottom
+    400030: Jaw-Bottom_end
+    400032: Jaw-Top
+    400034: Jaw-Top_end
+    400036: Neck
+    400038: Spine00
+    400040: Tail-BendyBone
+    400042: Tail-BendyBone_end
+    400044: Tail-Head
+    400046: Tail-Tail
+    400048: Tail-Tail_end
+    2100000: Black
+    2100002: Pink
+    2100004: White
+    2100006: Wood00
+    2100008: Grey
+    4300000: DogMesh
+    7400000: Dog|DogAction
+    7400002: Dog|DogAction.001
+    7400004: Dog|Idle
+    7400006: Dog|Idle (1)
+    7400008: Dog|DogAction.001 (1)
+    9500000: //RootNode
+    13700000: DogMesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 2cbc1c43a54aa47a8937cc44e6fe21ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: 185bd229a48134ce5b41e8a0b18d928e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pink
+    second: {fileID: 2100000, guid: 706bc012b0d194d89a04cdf27d81307d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: acd42a76702d740788123634289c755b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood00
+    second: {fileID: 2100000, guid: 9339093f3ae9f42fab4fdfcca28b1bdd, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dog|DogAction.001 (1)
+      takeName: Dog|DogAction.001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dog|DogAction.001
+      takeName: Dog|DogAction.001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dog|Idle
+      takeName: Dog|Idle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
