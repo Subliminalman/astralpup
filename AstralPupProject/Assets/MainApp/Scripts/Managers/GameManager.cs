@@ -47,6 +47,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    void Update () {
+        if (Input.GetKeyDown (KeyCode.Escape)) {
+            uiManager.Pause (); 
+        }
+
+    }
+
     #endregion
 
     #region GameState
