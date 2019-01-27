@@ -22,11 +22,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpForce = 1000f;
 
+    private float _baseDrag;
+
     // Start is called before the first frame update
     void Start()
     {
 		_rb = GetComponent<Rigidbody>();
         _cameraFollow = cameraPivot.GetComponent<CameraFollow>();
+        _baseDrag = _rb.drag;
     }
 
     // Update is called once per frame
@@ -41,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_timeSinceGround < _maxTimeSinceGround)
         {
+            _rb.drag = _baseDrag;
             if (target.magnitude > 0.2f)
             {
                 target = Vector3.Normalize(target);
@@ -64,6 +68,10 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Jump");
                 _rb.AddForce(new Vector3(0, jumpForce, 0));
             }
+        }
+        else
+        {
+            _rb.drag = 0;
         }
     }
 
