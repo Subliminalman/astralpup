@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     Animator grandmaAnimator;
 
+
     bool canQuit = false;
     Player player;
     UIManager uiManager;
@@ -114,13 +115,16 @@ public class GameManager : MonoBehaviour {
         houseCamera.transform.localPosition = new Vector3(-0.77f, 0.937f, -0.15f); 
         houseCamera.gameObject.SetActive (true);
 
-        grandmaAnimator.Play ("");
+        grandmaAnimator.SetTrigger ("hug");
 
         player.gameObject.SetActive (false);
         AICharacter[] ai = Transform.FindObjectsOfType<AICharacter> ();
         for (int i = 0; i < ai.Length; i++) {
             ai[i].gameObject.SetActive (false);
         }
+
+        Bubble b = Transform.FindObjectOfType<Bubble> ();
+        b.gameObject.SetActive (false);
 
         DOTween.Sequence()
             .Append(houseCamera.transform.DOLocalMove(new Vector3(-2.053f, 0.937f, 0.505f), 3f))
