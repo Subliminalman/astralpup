@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class CameraFollow : MonoBehaviour
     public float cameraLerpTime = 0.75f;
     private float _cameraTimer;
     private Quaternion _startRotation;
+    public GameObject cameraObject;
+
+    public float cameraSizeTarget = 8.3f;
+    public float cameraZoomSpeed = 5f;
+    private Camera cam;
 
     void Awake () {
         PlayerMovement pm = Transform.FindObjectOfType<PlayerMovement> ();
@@ -25,7 +31,7 @@ public class CameraFollow : MonoBehaviour
         _cameraRotation = transform;
         _cameraTimer = cameraLerpTime;
         _startRotation = transform.rotation;
-
+        cam = cameraObject.GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -37,6 +43,24 @@ public class CameraFollow : MonoBehaviour
             _cameraTimer += Time.deltaTime;
 
         transform.rotation = Quaternion.Lerp(_startRotation, _cameraRotation.rotation, _cameraTimer / cameraLerpTime);
+
+        if (cam.orthographicSize < cameraSizeTarget)
+        {
+            cam.orthographicSize += cameraZoomSpeed * Time.deltaTime;
+            if (cam.orthographicSize > cameraSizeTarget)
+            {
+                cam.orthographicSize = cameraSizeTarget;
+            }
+        }
+        if (cam.orthographicSize > cameraSizeTarget)
+        {
+            cam.orthographicSize -= cameraZoomSpeed * Time.deltaTime;
+            if (cam.orthographicSize < cameraSizeTarget)
+            {
+                cam.orthographicSize = cameraSizeTarget;
+            }
+        }
+
     }
 
     public void RotateCamera(Transform target) {

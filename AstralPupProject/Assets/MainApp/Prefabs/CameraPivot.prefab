@@ -129,3 +129,4 @@ MonoBehaviour:
   dog: {fileID: 0}
   lerpTime: 3
   cameraLerpTime: 1
+  cameraObject: {fileID: 849042492858825537}
