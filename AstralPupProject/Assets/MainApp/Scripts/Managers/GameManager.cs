@@ -62,8 +62,7 @@ public class GameManager : MonoBehaviour {
 
     public void Setup () {
         player.Setup ();
-        //Reset level
-        currentCheckpoint = homeCheckpoint;
+       
     }
 
     public void OnDogDeath () {
@@ -72,10 +71,13 @@ public class GameManager : MonoBehaviour {
         uiManager.FadeToBlackAndBack (() => {
             if (currentCheckpoint == null) {
                 if (homeCheckpoint != null) {
+                    currentCheckpoint = homeCheckpoint;
                     player.transform.position = homeCheckpoint.transform.position;
                 } else {
                     player.transform.position = playerOgPosition;
                 }
+            } else {
+                player.transform.position = currentCheckpoint.transform.position;
             }
 
             Setup ();
