@@ -1,19 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour {
     [SerializeField]
     Checkpoint homeCheckpoint;
     Checkpoint currentCheckpoint;
 
+    [SerializeField]
+    Camera houseCamera;
 
+    [SerializeField]
+    Animator grandmaAnimator;
 
-
+    bool canQuit = false;
     Player player;
     UIManager uiManager;
 
-
+    public bool hasStick = false;
     Vector3 playerOgPosition;
 
     static GameManager singleton;
@@ -45,6 +50,20 @@ public class GameManager : MonoBehaviour {
         if (singleton == null) {
             singleton = null;
         }
+    }
+
+    void Update () {
+
+        if (canQuit) {
+            if (Input.anyKeyDown) {
+                Application.Quit ();
+            }
+        }
+
+        if (Input.GetKeyDown (KeyCode.Escape)) {
+            uiManager.Pause (); 
+        }
+
     }
 
     #endregion
@@ -85,7 +104,33 @@ public class GameManager : MonoBehaviour {
     }
 
     public void SetCheckpoint (Checkpoint _checkpoint) {
+        if (hasStick) {
+            FinishGame ();
+        }
         currentCheckpoint = _checkpoint;
+    }
+
+    void FinishGame () {
+        houseCamera.transform.localPosition = new Vector3(-0.77f, 0.937f, -0.15f); 
+        houseCamera.gameObject.SetActive (true);
+
+        grandmaAnimator.Play ("");
+
+        player.gameObject.SetActive (false);
+        AICharacter[] ai = Transform.FindObjectsOfType<AICharacter> ();
+        for (int i = 0; i < ai.Length; i++) {
+            ai[i].gameObject.SetActive (false);
+        }
+
+        DOTween.Sequence()
+            .Append(houseCamera.transform.DOLocalMove(new Vector3(-2.053f, 0.937f, 0.505f), 3f))
+            .Append(uiManager.BlackoutImage.DOFade(1f, 3f).SetDelay(2f))
+            .Append(uiManager.goodbyText.DOFade(1f, 3f))
+            .Append(uiManager.endText.DOFade(1f, 3f))
+            .Append(uiManager.finishText.DOFade(1f, 1f).SetDelay(2f))
+            .OnComplete(() => {
+                canQuit = true;
+            });
     }
 
     #endregion 

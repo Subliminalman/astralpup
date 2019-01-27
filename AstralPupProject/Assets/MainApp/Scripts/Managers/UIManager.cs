@@ -8,14 +8,20 @@ public class UIManager : MonoBehaviour {
     Image blackoutImage;
     [SerializeField]
     GameObject pauseMenu;
+    [SerializeField]
+    GameObject quitPanel;
+
+
+    public Text goodbyText, endText, finishText;
 
     Coroutine blackoutCoroutine;
-
+    public Image BlackoutImage {
+        get { return blackoutImage; }
+    }
     public void FadeToBlackAndBack (System.Action OnFade = null, System.Action OnComplete = null) {
         if (blackoutCoroutine != null) {
             StopCoroutine (blackoutCoroutine);
         }
-
         blackoutCoroutine = StartCoroutine (Blackout(OnFade, OnComplete));
     }
 
@@ -26,13 +32,11 @@ public class UIManager : MonoBehaviour {
             blackoutImage.color = new Color (0f, 0f, 0f, t);
             yield return null;
         }
-
         if (OnFade != null) {
             OnFade ();
         }
 
         yield return new WaitForSeconds (1f);
-
 
         t = 0f;
         while (t < 1f) {
@@ -46,14 +50,23 @@ public class UIManager : MonoBehaviour {
         }
     }
 
+    public void Pause () {
+        if (Time.timeScale > 0f) {
+            ShowPauseMenu ();
+        } else {
+            HidePauseMenu ();
+        }
+    }
+
     public void ShowPauseMenu () {
         Time.timeScale = 0f;
+        quitPanel.SetActive (false);
         pauseMenu.SetActive (true);
     }
 
     public void HidePauseMenu () {
         Time.timeScale = 1f;
-        pauseMenu.SetActive (true);
+        pauseMenu.SetActive (false);
     }
 
     public void QuitGame () {

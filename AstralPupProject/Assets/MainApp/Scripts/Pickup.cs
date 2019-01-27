@@ -13,11 +13,11 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
         transform.parent = player;
         transform.localPosition = mouthPosition;
         transform.localEulerAngles = mouthAngle;
         beingCarried = true;
+        GameManager.Singleton.hasStick = true;
         GetComponent<Collider>().isTrigger = false;
     }
 }
